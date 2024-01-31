@@ -16,12 +16,16 @@
                     document.getElementById("demo").innerHTML += this.msg;
                 },
             };
-            window.addEventListener("load", () => {
+            window.addEventListener("load", function () {
+                console.log(this);
                 obj.hello();
             });
-            document.getElementById("btn").addEventListener("click", () => {
-                obj.hello();
-            });
+            document
+                .getElementById("btn")
+                .addEventListener("click", function () {
+                    console.log(this);
+                    obj.hello();
+                });
         </script>
     </body>
 </html>
